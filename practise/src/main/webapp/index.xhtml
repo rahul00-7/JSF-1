@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+    
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Project 1</title>
+<br/>
+	
+</h:head>
+<h:body>
+	<h:form>
+	
+		
+		<p:outputLabel for="name" styleClass="label" value="Customer Name" />
+		<h:inputText id="name" value="#{m1.name}" label="name" />
+		<br/>
+		<p:outputLabel for="address" styleClass="label" value="Customer address" />
+		<h:inputTextarea rows="4" cols="10" id="address" value="#{m1.address}" label="address" />
+		<br/>
+		<p:outputLabel for="pwd" styleClass="label" value="Customer Password" />
+		<h:inputSecret id="pwd" value="#{m1.password}" />
+		<pre>
+		<!--<h:commandButton id="btn1" value="click Me"  action="#{btn.displayName()}"/>-->
+		<h:commandButton id="btn1" value="click Me" />
+		</pre>
+		<h:outputText value="#{m1.address}" />
+		<br/>
+		<h:outputText value="#{m1.name}" />
+		<br/>
+		Accept Terms and condition::<h:selectBooleanCheckbox id="sSelectProperty" 
+		value="#{btn.sSelectProperty}" />
+		<h:outputText value="#{btn.sSelectProperty}" />
+		<br/>
+		<h:selectManyCheckbox value="#{btn.courses}">
+			<f:selectItem itemLabel="Program in C" itemValue="C" />
+			<f:selectItem itemLabel="Program in Java" itemValue="Java" />
+			<f:selectItem itemLabel="Program in C++" itemValue="C++" />
+			<f:selectItem itemLabel="Program in Python" itemValue="Python" />
+		</h:selectManyCheckbox>
+		<br/>
+		<h:outputText value="#{btn.courses}" ></h:outputText>
+		<br/>
+		<h:selectManyCheckbox>
+			<f:selectItems value="#{m1.items}" />
+		</h:selectManyCheckbox>
+		
+	</h:form>
+</h:body>
+
+</ui:composition>
+
+</html>
