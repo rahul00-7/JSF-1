@@ -16,10 +16,20 @@
 	
 </h:head>
 <h:body>
-	<h:form>
 	
-	<h1>Welcome to the demo app.</h1>	
-		
+	
+	<h1>Welcome to PlantPlaces.com!</h1>
+	<br/>
+	<em><h:outputLabel value="#{applicationInfo.slogan}" /></em>
+	<br />
+	Enter a plant name, and then choose Search.
+	<h:form>
+		<h:inputText value="#{plant.name}" />
+		<h:commandButton value="Submit" action="#{searchPlants.execute}" />
+	</h:form>
+	
+	<!--  	
+	<h:form>
 		<p:outputLabel for="name" styleClass="label" value="Customer Name" />
 		<h:inputText id="name" value="#{m1.name}" label="name" />
 		<br/>
@@ -29,7 +39,10 @@
 		<p:outputLabel for="pwd" styleClass="label" value="Customer Password" />
 		<h:inputSecret id="pwd" value="#{m1.password}" />
 		<pre>
+		-->
 		<!--<h:commandButton id="btn1" value="click Me"  action="#{btn.displayName()}"/>-->
+		
+		<!-- 
 		<h:commandButton id="btn1" value="click Me" />
 		</pre>
 		<h:outputText value="#{m1.address}" />
@@ -54,6 +67,9 @@
 		</h:selectManyCheckbox>
 		
 	</h:form>
+	
+	 -->
+	
 </h:body>
 
 </ui:composition>
